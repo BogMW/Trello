@@ -127,7 +127,7 @@ var appRoutes = [
     {
         path: 'Trello',
         children: [
-            { path: '', component: __WEBPACK_IMPORTED_MODULE_7__list_list_component__["a" /* ListComponent */] },
+            { path: '', redirectTo: 'list' },
             { path: 'list', component: __WEBPACK_IMPORTED_MODULE_7__list_list_component__["a" /* ListComponent */] },
             { path: 'login', component: __WEBPACK_IMPORTED_MODULE_9__login_login_component__["a" /* LoginComponent */] },
             { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_10__registration_registration_component__["a" /* RegistrationComponent */] }
@@ -846,7 +846,7 @@ module.exports = "<p>\n  error works!\n</p>\n"
 /***/ 232:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n  <div class=\"container\">\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <img class=\"userPhoto\" *ngIf=\"loggedInUser\" src=\"{{loggedInUser.photoURL}}\" alt=\"\">\n      <p class=\"navbar-brand\" >Welcome to your dashboard <span *ngIf=\"loggedInUser\">{{loggedInUser.email}}</span> </p>\n    </div>\n    <div class=\"navbar-collapse collapse\">\n      <form class=\"navbar-form navbar-right\" role=\"form\">\n        <button *ngIf=\"!loggedInUser\" md-raised-button routerLink=\"/login\">Log in</button>\n        <button *ngIf=\"!loggedInUser\" class=\"btn-sign\" md-raised-button routerLink=\"/registration\">Sign up</button>\n        <button *ngIf=\"loggedInUser\"  class=\"btn-cancel\" md-raised-button (click)=\"logout()\">Log out</button>\n      </form>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n  <div class=\"container\">\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <img class=\"userPhoto\" *ngIf=\"loggedInUser\" src=\"{{loggedInUser.photoURL}}\" alt=\"\">\n      <p class=\"navbar-brand\" >Welcome to your dashboard <span *ngIf=\"loggedInUser\">{{loggedInUser.email}}</span> </p>\n    </div>\n    <div class=\"navbar-collapse collapse\">\n      <form class=\"navbar-form navbar-right\" role=\"form\">\n        <button *ngIf=\"!loggedInUser\" md-raised-button routerLink=\"Trello/login\">Log in</button>\n        <button *ngIf=\"!loggedInUser\" class=\"btn-sign\" md-raised-button routerLink=\"Trello/registration\">Sign up</button>\n        <button *ngIf=\"loggedInUser\"  class=\"btn-cancel\" md-raised-button (click)=\"logout()\">Log out</button>\n      </form>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
