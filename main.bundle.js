@@ -124,7 +124,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var appRoutes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_9__login_login_component__["a" /* LoginComponent */] },
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_7__list_list_component__["a" /* ListComponent */] },
     { path: 'list', component: __WEBPACK_IMPORTED_MODULE_7__list_list_component__["a" /* ListComponent */] },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_9__login_login_component__["a" /* LoginComponent */] },
     { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_10__registration_registration_component__["a" /* RegistrationComponent */] }
@@ -299,7 +299,7 @@ var HeaderComponent = (function () {
     HeaderComponent.prototype.logout = function () {
         this.userSVC.logout();
         this.loggedInUser = null;
-        this.router.navigate(['/login']);
+        this.router.navigate(['login']);
     };
     return HeaderComponent;
 }());
@@ -384,7 +384,7 @@ var ListComponent = (function () {
                 });
             }
             else {
-                _this.router.navigate(['login/']);
+                _this.router.navigate(['login']);
             }
         });
     };
@@ -531,7 +531,7 @@ var RegistrationComponent = (function () {
         }
     };
     RegistrationComponent.prototype.cancel = function () {
-        this.router.navigate(['/login']);
+        this.router.navigate(['login']);
     };
     RegistrationComponent.prototype.ngOnInit = function () {
     };
