@@ -124,10 +124,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var appRoutes = [
+    // {
+    //   path: 'Trello',
+    //   children: [
     { path: '', component: __WEBPACK_IMPORTED_MODULE_7__list_list_component__["a" /* ListComponent */] },
     { path: 'list', component: __WEBPACK_IMPORTED_MODULE_7__list_list_component__["a" /* ListComponent */] },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_9__login_login_component__["a" /* LoginComponent */] },
     { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_10__registration_registration_component__["a" /* RegistrationComponent */] }
+    //   ]
+    // }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -150,7 +155,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* RouterModule */].forRoot(appRoutes),
+            __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* RouterModule */].forRoot(appRoutes, { useHash: true }),
             __WEBPACK_IMPORTED_MODULE_14__angular_material__["a" /* MdButtonModule */],
             __WEBPACK_IMPORTED_MODULE_14__angular_material__["b" /* MdCardModule */],
             __WEBPACK_IMPORTED_MODULE_14__angular_material__["c" /* MdMenuModule */],
