@@ -124,15 +124,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var appRoutes = [
-    {
-        path: 'Trello',
-        children: [
-            { path: '', component: __WEBPACK_IMPORTED_MODULE_9__login_login_component__["a" /* LoginComponent */] },
-            { path: 'list', component: __WEBPACK_IMPORTED_MODULE_7__list_list_component__["a" /* ListComponent */] },
-            { path: 'login', component: __WEBPACK_IMPORTED_MODULE_9__login_login_component__["a" /* LoginComponent */] },
-            { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_10__registration_registration_component__["a" /* RegistrationComponent */] }
-        ]
-    }
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_9__login_login_component__["a" /* LoginComponent */] },
+    { path: 'list', component: __WEBPACK_IMPORTED_MODULE_7__list_list_component__["a" /* ListComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_9__login_login_component__["a" /* LoginComponent */] },
+    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_10__registration_registration_component__["a" /* RegistrationComponent */] }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -747,7 +742,7 @@ var UserService = (function () {
             console.dir(response.email);
             alert('Welcome ' + response.email);
             _this.initializeList(response.uid);
-            _this.router.navigate(['/list']);
+            _this.router.navigate(['list']);
         })
             .catch(function (error) {
             alert(error.message + " Please try Again!");
@@ -761,7 +756,7 @@ var UserService = (function () {
         __WEBPACK_IMPORTED_MODULE_2_firebase__["auth"]().signInWithEmailAndPassword(loginEmail, loginPaswword)
             .then(function () {
             alert('Welcome');
-            _this.router.navigate(['/list']);
+            _this.router.navigate(['list']);
         })
             .catch(function (error) {
             alert(error.message + " Unable to login. Try again!");
@@ -776,7 +771,7 @@ var UserService = (function () {
         __WEBPACK_IMPORTED_MODULE_2_firebase__["auth"]().signInWithPopup(social)
             .then(function (result) {
             alert('Welcome ' + result.user.displayName);
-            _this.router.navigate(['/list']);
+            _this.router.navigate(['list']);
         })
             .catch(function (error) {
             alert(error.message + " Unable to login. Try again!");
@@ -846,7 +841,7 @@ module.exports = "<p>\n  error works!\n</p>\n"
 /***/ 232:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n  <div class=\"container\">\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <img class=\"userPhoto\" *ngIf=\"loggedInUser\" src=\"{{loggedInUser.photoURL}}\" alt=\"\">\n      <p class=\"navbar-brand\" >Welcome to your dashboard <span *ngIf=\"loggedInUser\">{{loggedInUser.email}}</span> </p>\n    </div>\n    <div class=\"navbar-collapse collapse\">\n      <form class=\"navbar-form navbar-right\" role=\"form\">\n        <button *ngIf=\"!loggedInUser\" md-raised-button routerLink=\"Trello/login\">Log in</button>\n        <button *ngIf=\"!loggedInUser\" class=\"btn-sign\" md-raised-button routerLink=\"Trello/registration\">Sign up</button>\n        <button *ngIf=\"loggedInUser\"  class=\"btn-cancel\" md-raised-button (click)=\"logout()\">Log out</button>\n      </form>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n  <div class=\"container\">\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <img class=\"userPhoto\" *ngIf=\"loggedInUser\" src=\"{{loggedInUser.photoURL}}\" alt=\"\">\n      <p class=\"navbar-brand\" >Welcome to your dashboard <span *ngIf=\"loggedInUser\">{{loggedInUser.email}}</span> </p>\n    </div>\n    <div class=\"navbar-collapse collapse\">\n      <form class=\"navbar-form navbar-right\" role=\"form\">\n        <button *ngIf=\"!loggedInUser\" md-raised-button routerLink=\"login\">Log in</button>\n        <button *ngIf=\"!loggedInUser\" class=\"btn-sign\" md-raised-button routerLink=\"registration\">Sign up</button>\n        <button *ngIf=\"loggedInUser\"  class=\"btn-cancel\" md-raised-button (click)=\"logout()\">Log out</button>\n      </form>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
