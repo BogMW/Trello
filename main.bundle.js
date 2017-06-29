@@ -128,9 +128,9 @@ var appRoutes = [
     //   path: 'Trello',
     //   children: [
     { path: '', component: __WEBPACK_IMPORTED_MODULE_7__list_list_component__["a" /* ListComponent */] },
-    { path: 'list', component: __WEBPACK_IMPORTED_MODULE_7__list_list_component__["a" /* ListComponent */] },
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_9__login_login_component__["a" /* LoginComponent */] },
-    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_10__registration_registration_component__["a" /* RegistrationComponent */] }
+    { path: '/list', component: __WEBPACK_IMPORTED_MODULE_7__list_list_component__["a" /* ListComponent */] },
+    { path: '/login', component: __WEBPACK_IMPORTED_MODULE_9__login_login_component__["a" /* LoginComponent */] },
+    { path: '/registration', component: __WEBPACK_IMPORTED_MODULE_10__registration_registration_component__["a" /* RegistrationComponent */] }
     //   ]
     // }
 ];
@@ -761,7 +761,7 @@ var UserService = (function () {
         __WEBPACK_IMPORTED_MODULE_2_firebase__["auth"]().signInWithEmailAndPassword(loginEmail, loginPaswword)
             .then(function () {
             alert('Welcome');
-            _this.router.navigate(['list']);
+            _this.router.navigate(['/list']);
         })
             .catch(function (error) {
             alert(error.message + " Unable to login. Try again!");
@@ -776,7 +776,7 @@ var UserService = (function () {
         __WEBPACK_IMPORTED_MODULE_2_firebase__["auth"]().signInWithPopup(social)
             .then(function (result) {
             alert('Welcome ' + result.user.displayName);
-            _this.router.navigate(['list']);
+            _this.router.navigate(['/list']);
         })
             .catch(function (error) {
             alert(error.message + " Unable to login. Try again!");
